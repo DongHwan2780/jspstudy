@@ -33,23 +33,3 @@ public class StopOver extends HttpServlet {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
