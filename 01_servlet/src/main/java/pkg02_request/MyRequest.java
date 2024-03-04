@@ -29,10 +29,11 @@ public class MyRequest extends HttpServlet {
     if(strNumber != null && !strNumber.isEmpty())
       number = Integer.parseInt(strNumber);
     System.out.println(number);
+    //System.out.println(Integer.parseInt(strNumber));
     
     /* Optional<T> 클래스를 이용한 [null & 빈 문자열] 처리 */
-    String strNumber2 = request.getParameter("number2");
-    Optional<String> opt = Optional.ofNullable(strNumber2);
+    String strNumber2 = request.getParameter("number2");    // number2의 값을 받아와서
+    Optional<String> opt = Optional.ofNullable(strNumber2); // ofNullable == 인자로 null값을 허용
     double number2 = Double.parseDouble(opt.orElse("0").isEmpty() ? "0" : opt.orElse("0"));
     System.out.println(number2);
     
