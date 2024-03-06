@@ -11,17 +11,26 @@
   
   <% int a = (int)(Math.random() * 8 + 2);  %>
   <% int b = (int)(Math.random() * 9 + 1);  %>
-    
-  <form method="POST"
-      action="<%=contextPath%>/test02/confirm.jsp">
+  
   <div>
     <button onclick="window.location.reload()">새로고침</button>
   </div>  
   <div>
     <label for="answer"><%=a%> X <%=b%></label>
     <input type="text" id="answer" name="answer">
-    <button type="submit">계산</button>
+    <button type="submit" onclick="func()">계산</button>
   </div>
-  </form>
+
+  <script>
+    function func()
+    {
+    	var i = <%=a%> * <%=b%>;
+    	var cmp = document.getElementById('answer').value;
+  	  if(i == cmp)
+  		  alert("정답");
+  	  else
+  		  alert("오답");
+    }
+  </script>
 </body>
 </html>

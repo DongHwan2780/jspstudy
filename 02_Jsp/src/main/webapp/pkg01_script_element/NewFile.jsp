@@ -5,7 +5,7 @@
   지시어(directive)
   1. <%@ page %>      : 현재 페이지 설정, import
   2. <%@ include %>   : 현재 페이지에 다른 페이지를 포함
-  3. <%@ taglib %>    : JSTL(자바 표준 태그 라이브러리)
+  3. <%@ taglib %>    : JSTL(자바서버페이지 표준 태그 라이브러리)
  --%>
 
 <%@page import="java.time.format.DateTimeFormatter" %>
